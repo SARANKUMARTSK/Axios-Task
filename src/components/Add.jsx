@@ -20,7 +20,7 @@ function Add() {
         phone,
         company
      })
-     navigate('/dashboard')
+     navigate('/home')
     }
   return <>
   <Form>

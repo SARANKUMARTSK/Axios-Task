@@ -22,6 +22,14 @@ function Home() {
         getUser()
     },[])
 
+
+    const handleEdit=async(user)=>{
+        navigate(`/edit/${user.id}`);
+        let res = await axios.get(`${API_URL}/${user.id}`);
+        getBlogs();
+       }
+
+
     const  handleDelete= async(user)=>{
         try{
          let res = await axios.delete(`${API_URL}/${user.id}`)
